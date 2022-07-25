@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "name": "brainstorm-me",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "The extension that helps you brainstorming through your navigation.",
   "scripts": {
     "build": "webpack",

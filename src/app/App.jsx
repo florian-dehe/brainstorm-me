@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-      <h1>Preact ! Ninja</h1>
+      <h1>Brainstorm Me!</h1>
     </div>
   );
 }

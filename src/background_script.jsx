@@ -18,7 +18,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
     case ID_ADD_SELECTION: {
       getBrainstormData().then(
         (brainstorm) => {
-          const idea = new Idea(info.pageUrl, info.selectedText);
+          const idea = new Idea(info.pageUrl, info.selectionText);
           brainstorm.pushNewIdea(idea);
 
           updateBrainstormData(brainstorm).then(
