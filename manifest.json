@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "Brainstorm Me!",
+	"description": "__MSG_extensionDescription__",
+	"version": "0.1.0",
+	"icons": {
+		"64": "icons/icon.png"
+	},
+	"permissions": ["contextMenus", "storage"],
+	"default_locale": "en",
+	"background": {
+		"scripts": [
+			"background_script.bundle.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": {
+			"64": "icons/icon.png"
+		},
+		"default_popup": "popup.html",
+		"default_title": "brainstorm-me"
+	}
+}

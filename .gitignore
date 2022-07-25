@@ -1,0 +1,8 @@
+# Node JS runtime modules
+node_modules/
+
+# Build folder
+dist/
+
+# Jest coverage
+coverage/

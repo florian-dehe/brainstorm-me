@@ -1,0 +1,10 @@
+{
+  "extensionDescription": {
+    "message": "The extension that helps you brainstorming through your navigation.",
+    "description": "Description of the extension."
+  },
+  "contextMenuItemAddSelection": {
+    "message": "Brainstorm Me !",
+    "description": "The context menu text when adding a selection for brainstorming."
+  }
+}
