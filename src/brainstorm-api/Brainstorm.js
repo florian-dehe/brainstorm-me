@@ -11,15 +11,20 @@ class Brainstorm {
 
   pushNewIdea(idea) {
     if (Object.keys(idea).length !== 0) {
-      this.ideas.push(idea);
+
+      let ideaToStore = idea.to_dict();
+      ideaToStore['id'] = this.ideas.length;
+
+      this.ideas.push(ideaToStore);
     }
   }
 
   setIdeas(ideas) {
     this.clearIdeas();
-    for (const idea_dict in ideas) {
+    for (let i = 0; i < ideas.length; i++) {
+      const idea_dict = ideas[i];
       const idea = new Idea(idea_dict.url, idea_dict.text);
-      this.ideas.push(idea);
+      this.pushNewIdea(idea);
     }
   }
 
