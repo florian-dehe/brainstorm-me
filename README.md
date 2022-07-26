@@ -44,8 +44,8 @@ It uses Jest and displays by default the coverage.
 ## Release History
 
 * 0.0.1
-    * Work in progress
-    * Basic API working
+    * Basic brainstorming API working with unit tests.
+    * First popup implementation in Preact with loading of ideas.
 
 ## Author & License
 
