@@ -7,3 +7,5 @@ function Idea({ url, text }) {
     </div>
   );
 }
+
+export default Idea;

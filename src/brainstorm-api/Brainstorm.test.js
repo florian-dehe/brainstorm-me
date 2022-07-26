@@ -38,7 +38,11 @@ describe("Push a new idea to a brainstorm", () => {
 
     expect(brainstorm.ideas).toEqual([]);
     brainstorm.pushNewIdea(idea);
-    expect(brainstorm.ideas).toContain(idea);
+    expect(brainstorm.ideas.length).toEqual(1);
+
+    let idea_dict = idea.to_dict();
+    idea_dict["id"] = 0;
+    expect(brainstorm.ideas).toContainEqual(idea_dict);
 
   });
 });
@@ -51,9 +55,34 @@ test("Clear all ideas from brainstorm", () => {
 
   expect(brainstorm.ideas).toEqual([]);
   brainstorm.pushNewIdea(idea);
-  expect(brainstorm.ideas).toContain(idea);
+  expect(brainstorm.ideas.length).toEqual(1);
 
   brainstorm.clearIdeas();
   expect(brainstorm.ideas).toEqual([]);
+
+});
+
+describe("Set a list of ideas", () => {
+
+  test("Empty list", () => {
+    const brainstorm = new Brainstorm();
+
+    expect(brainstorm.ideas).toEqual([]);
+    brainstorm.setIdeas([]);
+    expect(brainstorm.ideas).toEqual([]);
+  });
+
+  test("Idea list", () => {
+    const brainstorm = new Brainstorm();
+
+    const idea = new Idea('test.fr', 'nice text');
+
+    expect(brainstorm.ideas).toEqual([]);
+    brainstorm.setIdeas([idea]);
+
+    let idea_dict = idea.to_dict();
+    idea_dict['id'] = 0;
+    expect(brainstorm.ideas).toContainEqual(idea_dict);
+  });
 
 });
