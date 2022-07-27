@@ -3,6 +3,7 @@ import { useState, useEffect } from 'preact/hooks'
 import { getBrainstormData } from '../brainstorm-api/storage'
 
 import Idea from './components/Idea'
+import Header from './components/Header'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <div>
-      <h1>Brainstorm Me!</h1>
+      <Header title='Brainstorm Me!' />
       <div>
         { ideas.map( (idea) => (
           <Idea key={idea.id} url={idea.url} text={idea.text} />
