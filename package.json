@@ -17,6 +17,7 @@
   "author": "Florian DEHE",
   "license": "MIT",
   "dependencies": {
+    "bulma": "^0.9.4",
     "preact": "^10.10.0"
   },
   "devDependencies": {

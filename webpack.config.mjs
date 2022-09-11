@@ -46,7 +46,7 @@ const config = {
       patterns: [
         "manifest.json",
         "src/popup.html",
-        "src/style.css",
+        "node_modules/bulma/css/bulma.css",
         { from: "src/_locales", to: "_locales" },
         { from: "src/icons", to: "icons"},
       ]

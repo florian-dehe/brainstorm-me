@@ -1,9 +1,8 @@
-import './Header.css'
 
 function Header({ title }) {
   return (
-    <div class="popup-header">
-      <h3>{ title }</h3>
+    <div class="is-flex">
+      <h2 class="is-size-4 mx-auto">{ title }</h2>
     </div>
   );
 }

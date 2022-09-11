@@ -1,11 +1,16 @@
-import './Idea.css'
 
-function Idea({ url, text }) {
+function Idea({ idea, onDelete }) {
   return (
-    <div class="idea-box">
-      <p>{text}</p>
-      <a href={url}>{url}</a>
-    </div>
+      <article class="message is-small my-1">
+        <div class="message-header">
+          <p>Idea</p>
+          <button class="delete is-small" aria-label="delete" onClick={ () => onDelete(idea.id) } />
+        </div>
+        <div class="message-body p-2">
+          <p>{ idea.text }</p>
+          <a class="button is-link is-small mt-2" href={idea.url}>Go</a>
+        </div>
+      </article>
   );
 }
 
