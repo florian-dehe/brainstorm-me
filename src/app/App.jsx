@@ -2,8 +2,9 @@ import { useState, useEffect } from 'preact/hooks'
 
 import { getBrainstormData, updateBrainstormData } from '../brainstorm-api/storage'
 
-import Idea from './components/Idea'
+import IdeaList from './components/IdeaList'
 import Header from './components/Header'
+import Toolbar from "./components/Toolbar"
 
 import Brainstorm from "../brainstorm-api/Brainstorm"
 
@@ -36,15 +37,24 @@ function App() {
     )
   }
 
+  const clearIdeas = () => {
+     const new_ideas = [];
+
+    setIdeas(new_ideas);
+
+    const brainstorm = new Brainstorm();
+    brainstorm.setIdeas(new_ideas);
+
+    updateBrainstormData( brainstorm ).then(
+      (value) => console.log("sucessful")
+    )
+  }
+
   return (
     <div>
       <Header title='Brainstorm Me!' />
-      <div class="p-2">
-        { ideas.map( (idea) => (
-          <Idea key={idea.id} idea={idea} onDelete={deleteIdea} />
-          )
-        )}
-      </div>
+      <IdeaList ideas={ideas} deleteIdea={deleteIdea} />
+      <Toolbar clearIdeas={clearIdeas} />
     </div>
   );
 }

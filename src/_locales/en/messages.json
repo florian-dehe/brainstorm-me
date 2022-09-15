@@ -6,5 +6,9 @@
   "contextMenuItemAddSelection": {
     "message": "Brainstorm Me !",
     "description": "The context menu text when adding a selection for brainstorming."
+  },
+  "ideaListEmpty": {
+    "message": "There are no ideas here.",
+    "description": "The user has no brainstorming ideas stored in the internal storage."
   }
 }
